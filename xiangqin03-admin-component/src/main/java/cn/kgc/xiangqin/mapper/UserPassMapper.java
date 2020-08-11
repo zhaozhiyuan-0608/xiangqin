@@ -9,6 +9,7 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface UserPassMapper {
 
+
     Integer delete(@Param("uid") int uid);
 
 

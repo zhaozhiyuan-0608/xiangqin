@@ -2,6 +2,7 @@ package cn.kgc.xiangqin.entity;
 
 public class UserPass {
 
+
     private  YongHu yongHu;
     /**
      *

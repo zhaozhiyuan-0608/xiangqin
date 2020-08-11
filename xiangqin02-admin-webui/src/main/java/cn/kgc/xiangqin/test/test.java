@@ -35,19 +35,19 @@ public void test01() throws Exception{
         ClassPathXmlApplicationContext ctx = new ClassPathXmlApplicationContext("spring-persist-mybatis.xml");
 
         UserPassService bean = ctx.getBean(UserPassService.class);
-/*        UserPass userPass =new UserPass();
+      UserPass userPass =new UserPass();
         userPass.setUname("zhangsan");
         userPass.setUpassword("1234567");
 
         UserPass login = bean.Login(userPass);
 
-        System.out.println(login);*/
+        System.out.println(login);
 
-        List<UserPass> userPasses = bean.queryAll(0);
+   /*     List<UserPass> userPasses = bean.queryAll(0);
 
         for (UserPass userPass : userPasses) {
             System.out.println(userPass);
-        }
+        }*/
     }
     @Test
     public void test03() throws Exception{
@@ -57,7 +57,7 @@ public void test01() throws Exception{
         List<YongHu> yongHus = bean.queryAll(0);
         for (YongHu hus : yongHus) {
 
-            System.out.println(hus);
+            System.out.println(hus.getUserPass1().getAdmin());
         }
 
 

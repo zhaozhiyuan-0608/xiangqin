@@ -101,4 +101,22 @@ public class Vip {
     public void setvEnd(Date vEnd) {
         this.vEnd = vEnd;
     }
+
+    @Override
+    public String toString() {
+        return "Vip{" +
+                "vId=" + vId +
+                ", vStart=" + vStart +
+                ", vEnd=" + vEnd +
+                '}';
+    }
+
+    public Vip() {
+    }
+
+    public Vip(Integer vId, Date vStart, Date vEnd) {
+        this.vId = vId;
+        this.vStart = vStart;
+        this.vEnd = vEnd;
+    }
 }

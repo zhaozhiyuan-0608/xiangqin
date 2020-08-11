@@ -157,10 +157,10 @@
 					var pwd=$(".password").val();
 					var dt=$("#code").val();
 					var udt=$(".code").val();
-					alert(name);
+				/*	alert(name);
 					alert(pwd);
 					alert(dt);
-					alert(udt);
+					alert(udt);*/
 					if (udt!=dt){
 						alert("验证码不正确")
 					}else{
@@ -170,10 +170,15 @@
 							style:"post",
 							success:function (result) {
 								console.log(result);
-
-									if(result!=null){
+								$(result).each(function () {
+									if(result!=null && this.admin==1){
+									alert(this.admin);
 										window.location.href="/back/index.html"
 									}
+								})
+
+
+
 
 							}
 

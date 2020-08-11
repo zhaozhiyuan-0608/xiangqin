@@ -8,7 +8,7 @@
   <script type="text/javascript">
   $(function () {
 
-    queryYongHu(0);
+       queryYongHu(0);
 
 
   })
@@ -27,11 +27,12 @@ success:function (result) {
 
   $(result).each(function () {
 
-      if(this.userPass.admin==1){
-       //alert(this.userPass.uid);
+    console.log(result);
+      if(this.userPass1.admin==1){
+       alert(this.userPass1.uid);
         str+="<tr>"+
                 "<td>"+this.id+"</td>"+
-                "<td>"+this.userPass.uname+"</td>"+
+                "<td>"+this.userPass1.uname+"</td>"+
                 "<td>"+this.name+"</td>"+
                 "<td>"+this.phone+"</td>"+
                 "<td>"+
@@ -39,13 +40,13 @@ success:function (result) {
 
                 +"</td>"+
                 "<td>"+this.age+"</td>"+
-                "<td>"+  "<a onclick='del("+this.userPass.uid+",this)'>删除</a>"+"</td>"+
+                "<td>"+  "<a onclick='del("+this.userPass1.uid+",this)'>删除</a>"+"</td>"+
                 +"</tr>"
 
       }else{
         str1+="<tr>"+
                 "<td>"+this.id+"</td>"+
-                "<td>"+this.userPass.uname+"</td>"+
+                "<td>"+this.userPass1.uname+"</td>"+
                 "<td>"+this.name+"</td>"+
                 "<td>"+this.phone+"</td>"+
                 "<td>"+
@@ -53,7 +54,7 @@ success:function (result) {
 
                 +"</td>"+
                 "<td>"+this.age+"</td>"+
-                "<td>"+  "<a onclick='del("+this.userPass.uid+",this)'>删除</a>"+"</td>"+
+                "<td>"+  "<a onclick='del("+this.userPass1.uid+",this)'>删除</a>"+"</td>"+
                 +"</tr>"
       }
 
