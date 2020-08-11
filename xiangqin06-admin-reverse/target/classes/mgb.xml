@@ -41,8 +41,8 @@
 
         <!--        表和实体类对应-->
         <table
-                tableName="yonghu"
-                domainObjectName="YongHu" >
+                tableName="work"
+                domainObjectName="Work" >
 
         </table>
 
