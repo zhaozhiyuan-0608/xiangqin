@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><![endif]-->
+  <title>Dashboard Preferences, Free Admin Template</title>
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="viewport" content="width=device-width">        
+  <link rel="stylesheet" href="css/templatemo_main.css">
+</head>
+<body>
+  <div id="main-wrapper">
+    <div class="navbar navbar-inverse" role="navigation">
+      <div class="navbar-header">
+        <div class="logo"><h1>Dashboard - Admin Template</h1></div>
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="sr-only">切换到navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button> 
+      </div>   
+    </div>
+    <div class="template-page-wrapper">
+      <div class="navbar-collapse collapse templatemo-sidebar">
+        <ul class="templatemo-sidebar-menu">
+          <li>
+            <form class="navbar-form">
+              <input type="text" class="form-control" id="templatemo_search_box" placeholder="Search...">
+              <span class="btn btn-default">Go</span>
+            </form>
+          </li>
+          <li><a href="index.html"><i class="fa fa-home"></i>仪表盘</a></li>
+          <li class="sub">
+            <a href="javascript:;">
+              <i class="fa fa-database"></i>嵌套菜单<div class="pull-right"><span class="caret"></span></div>
+            </a>
+            <ul class="templatemo-submenu">
+              <li><a href="#">张三</a></li>
+              <li><a href="#">李四</a></li>
+              <li><a href="#">王五</a></li>
+              <li><a href="#">赵六</a></li>
+              <li><a href="#">田七</a></li>
+            </ul>
+          </li>
+          <li><a href="data-visualization.html"><i class="fa fa-cubes"></i><span class="badge pull-right">9</span>数据可视化</a></li>
+          <li><a href="maps.html"><i class="fa fa-map-marker"></i><span class="badge pull-right">42</span>地图</a></li>
+          <li><a href="tables.html"><i class="fa fa-users"></i><span class="badge pull-right">新</span>管理员</a></li>
+          <li class="active"><a href="#"><i class="fa fa-cog"></i>首选项</a></li>
+          <li><a href="javascript:;" data-toggle="modal" data-target="#confirmModal"><i class="fa fa-sign-out"></i>离开</a></li>
+        </ul>
+      </div><!--/.navbar-collapse -->
+
+      <div class="templatemo-content-wrapper">
+        <div class="templatemo-content">
+          <ol class="breadcrumb">
+            <li><a href="index.html">管理员 仪表盘</a></li>
+            <li><a href="#">首选项</a></li>
+            <li class="active">表单控件</li>
+          </ol>
+          <h1>首选项</h1>
+          <p class="margin-bottom-15">这里是另一个表单和表单控件</p>
+          <div class="row">
+            <div class="col-md-12">
+              <form role="form" id="templatemo-preferences-form">
+                <div class="row">
+                  <div class="col-md-6 margin-bottom-15">
+                    <label for="firstName" class="control-label">名字</label>
+                    <input type="text" class="form-control" id="firstName" value="John">                  
+                  </div>
+                  <div class="col-md-6 margin-bottom-15">
+                    <label for="lastName" class="control-label">姓氏</label>
+                    <input type="text" class="form-control" id="lastName" value="Henry">                 
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-6 margin-bottom-15">
+                    <label>用户名字</label>
+                    <p class="form-control-static" id="username">@admin</p>
+                  </div>
+                  <div class="col-md-6 margin-bottom-15">
+                    <label>邮箱地址</label>
+                    <p class="form-control-static" id="email">admin@company.com</p>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-6 margin-bottom-15">
+                    <label for="currentPassword">当前的密码</label>
+                    <input type="password" class="form-control" id="currentPassword" value="********" disabled>  
+                  </div>
+                  <div class="col-md-6 margin-bottom-15">
+                  </div>
+                </div>
+                
+                <div class="row">
+                  <div class="col-md-6 margin-bottom-15">
+                    <label for="password_1">新密码</label>
+                    <input type="password" class="form-control" id="password_1" placeholder="New Password">  
+                  </div>
+                  <div class="col-md-6 margin-bottom-15">
+                    <label for="password_2">确认你的新密码</label>
+                    <input type="password" class="form-control" id="password_2" placeholder="Confirm New Password">  
+                  </div>
+                </div>
+                
+                <div class="has-success has-feedback">
+                  <div class="row">
+                   <div class="col-md-12 margin-bottom-15">
+                    <label class="control-label" for="inputSuccess">输入成功！</label>
+                    <input type="text" class="form-control" id="inputSuccess">
+                    <span class="fa fa-check form-control-feedback"></span>
+                  </div> 
+                </div>
+                
+              </div>
+              <div class="row has-warning has-feedback">
+                <div class="col-md-12 margin-bottom-15">
+                  <label class="control-label" for="inputWarning">输入警告！</label>
+                  <input type="text" class="form-control" id="inputWarning">
+                  <span class="fa fa-warning form-control-feedback"></span>
+                </div>
+              </div>
+              <div class="row has-error has-feedback">
+                <div class="col-md-12 margin-bottom-15">
+                  <label class="control-label" for="inputError">输入错误！</label>
+                  <input type="text" class="form-control" id="inputError">
+                  <span class="fa fa-times form-control-feedback"></span>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12 margin-bottom-15">
+                  <label for="notes">注释</label>
+                  <textarea class="form-control" rows="3" id="notes"></textarea>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6 margin-bottom-15">
+                  <label for="singleSelect">单一选择控制</label>
+                  <select class="form-control margin-bottom-15" id="singleSelect">
+                    <option>HTML</option>
+                    <option>CSS</option>
+                    <option>JavaScript</option>
+                    <option>jQuery</option>
+                    <option>Bootstrap</option>
+                  </select>
+                  <label for="multipleSelect">多个选择控制</label>
+                  <select multiple class="form-control" id="multipleSelect">
+                    <option>图表</option>
+                    <option>图表</option>
+                    <option>表单</option>
+                    <option>图标</option>
+                    <option>响应</option>
+                  </select>  
+                </div>
+                <div class="col-md-6">
+                  <div class="checkbox">
+                    <label>
+                      <input type="checkbox" value="">
+                      当新的邮箱注册时，给我发邮件！
+                    </label>
+                  </div>
+                  <div class="checkbox disabled margin-bottom-15">
+                    <label>
+                      <input type="checkbox" value="" disabled>
+                      从来没有给我发邮件！
+                    </label>
+                  </div>
+                  <div class="radio margin-bottom-15">
+                    <label>
+                      <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                      HTML 格式
+                    </label>
+                  </div>
+                  <div class="radio">
+                    <label>
+                      <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                      纯文本
+                    </label>
+                  </div>
+                  <div class="radio disabled">
+                    <label>
+                      <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3" disabled>
+                      富文本
+                    </label>
+                  </div>                 
+                </div>                            
+              </div>                
+              <div class="row">
+                <div class="col-md-12 margin-bottom-15">
+                  <label class="checkbox-inline">
+                    <input type="checkbox" id="inlineCheckbox1" value="option1" checked> 服务器的状态
+                  </label>
+                  <label class="checkbox-inline">
+                    <input type="checkbox" id="inlineCheckbox2" value="option2" checked> 记忆状态
+                  </label>
+                  <label class="checkbox-inline">
+                    <input type="checkbox" id="inlineCheckbox3" value="option3" checked> 过期成员
+                  </label>                      
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12 margin-bottom-15">
+                  <label class="radio-inline">
+                    <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" checked> 引导程序
+                  </label>
+                  <label class="radio-inline">
+                    <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 基础
+                  </label>
+                  <label class="radio-inline">
+                    <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3"> 骨架
+                  </label>                    
+                </div>                  
+              </div>
+              <div class="row">
+                <div class="col-md-12 margin-bottom-30">
+                  <label for="exampleInputFile">File input</label>
+                  <input type="file" id="exampleInputFile">
+                  <p class="help-block">你可以在这里上传文件</p>
+                </div>                  
+              </div>
+              <div class="row templatemo-form-buttons">
+                <div class="col-md-12">
+                  <button type="submit" class="btn btn-primary">更新</button>
+                  <button type="reset" class="btn btn-default">重置</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="confirmModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            <h4 class="modal-title" id="myModalLabel">你确定要离开吗？</h4>
+          </div>
+          <div class="modal-footer">
+            <a href="sign-in.html" class="btn btn-primary">是的</a>
+            <button type="button" class="btn btn-default" data-dismiss="modal">不，我再想想</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="templatemo-footer">
+      <div class="templatemo-copyright">
+        <p>Copyright &copy; 2084 Your Company Name Collect from <a href="http://www.17sucai.com/" title="网页模板" target="_blank">网页模板</a></p>
+      </div>
+    </footer>
+  </div>
+</div>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/templatemo_script.js"></script>
+</body>
+</html>

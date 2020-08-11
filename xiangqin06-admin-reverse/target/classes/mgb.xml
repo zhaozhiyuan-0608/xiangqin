@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+    <!--   连接数据库 -->
+
+
+    <context id="DB2Tables" targetRuntime="MyBatis3">
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver"
+                        connectionURL="jdbc:mysql:///yuepao"
+                        userId="root"
+                        password="875086295">
+        </jdbcConnection>
+
+        <javaTypeResolver >
+            <property name="forceBigDecimals" value="false" />
+        </javaTypeResolver>
+
+        <!--        实体类生成的位置 04-->
+        <javaModelGenerator
+                targetPackage="cn.kgc.xiangqin.entity"
+                targetProject="D:\idea_project\xiangqin\xiangqin04-admin-entity\src\main\java">
+            <property name="enableSubPackages" value="true" />
+            <property name="trimStrings" value="true" />
+        </javaModelGenerator>
+        <!--映射sql 生成的位置 02-->
+        <sqlMapGenerator
+                targetPackage="mapper"
+                targetProject="D:\idea_project\xiangqin\xiangqin02-admin-webui\src\main\resources">
+            <property name="enableSubPackages" value="true" />
+        </sqlMapGenerator>
+
+        <!--        mapper中接口生成的位置 03-->
+        <javaClientGenerator type="XMLMAPPER"
+                             targetPackage="cn.kgc.xiangqin.mapper"
+                             targetProject="D:\idea_project\xiangqin\xiangqin03-admin-component\src\main\java">
+            <property name="enableSubPackages" value="true" />
+        </javaClientGenerator>
+
+        <!--        表和实体类对应-->
+        <table
+                tableName="yonghu"
+                domainObjectName="YongHu" >
+
+        </table>
+
+    </context>
+</generatorConfiguration>

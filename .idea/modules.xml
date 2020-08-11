@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/xiangqin01-admin-parent/xiangqin01-admin-parent.iml" filepath="$PROJECT_DIR$/xiangqin01-admin-parent/xiangqin01-admin-parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xiangqin02-admin-webui/xiangqin02-admin-webui.iml" filepath="$PROJECT_DIR$/xiangqin02-admin-webui/xiangqin02-admin-webui.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xiangqin03-admin-component/xiangqin03-admin-component.iml" filepath="$PROJECT_DIR$/xiangqin03-admin-component/xiangqin03-admin-component.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xiangqin04-admin-entity/xiangqin04-admin-entity.iml" filepath="$PROJECT_DIR$/xiangqin04-admin-entity/xiangqin04-admin-entity.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xiangqin05-admin-util/xiangqin05-admin-util.iml" filepath="$PROJECT_DIR$/xiangqin05-admin-util/xiangqin05-admin-util.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xiangqin06-admin-reverse/xiangqin06-admin-reverse.iml" filepath="$PROJECT_DIR$/xiangqin06-admin-reverse/xiangqin06-admin-reverse.iml" />
+    </modules>
+  </component>
+</project>

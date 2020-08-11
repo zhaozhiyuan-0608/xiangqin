@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><![endif]-->
+  <title>Dashboard Tables, Free Admin Template</title>
+
+  <script type="text/javascript" src="/js/jquery-3.4.1.min.js"></script>
+  <script type="text/javascript">
+  $(function () {
+
+       queryYongHu(0);
+
+
+  })
+
+
+
+
+function queryYongHu(id) {
+$.ajax({
+  url: "/queryAll",
+data:{"id":id==null?0:id},
+success:function (result) {
+
+  var str='';
+  var str1='';
+
+  $(result).each(function () {
+
+      if(this.userPass.admin==1){
+       //alert(this.userPass.uid);
+        str+="<tr>"+
+                "<td>"+this.id+"</td>"+
+                "<td>"+this.userPass.uname+"</td>"+
+                "<td>"+this.name+"</td>"+
+                "<td>"+this.phone+"</td>"+
+                "<td>"+
+                this.qq
+
+                +"</td>"+
+                "<td>"+this.age+"</td>"+
+                "<td>"+  "<a onclick='del("+this.userPass.uid+",this)'>删除</a>"+"</td>"+
+                +"</tr>"
+
+      }else{
+        str1+="<tr>"+
+                "<td>"+this.id+"</td>"+
+                "<td>"+this.userPass.uname+"</td>"+
+                "<td>"+this.name+"</td>"+
+                "<td>"+this.phone+"</td>"+
+                "<td>"+
+                this.qq
+
+                +"</td>"+
+                "<td>"+this.age+"</td>"+
+                "<td>"+  "<a onclick='del("+this.userPass.uid+",this)'>删除</a>"+"</td>"+
+                +"</tr>"
+      }
+
+
+
+  })
+
+ $(".guanli").empty().append(str);
+ $(".yonghu").empty().append(str1);
+
+}
+
+})
+
+
+}
+
+  function del(id,obj) {
+
+    if(confirm("确实要删除么？")){
+
+      $.ajax({
+        url:"/del",
+        data:{"id":id},
+        success:function (result) {
+          if(result){
+            alert("删除成功");
+            $(obj).parents("tr").remove();
+          }else{
+            alert("删除失败");
+          }
+        }
+      })
+    }
+  }
+
+
+
+
+
+
+    
+    
+  </script>
+
+
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" href="css/templatemo_main.css">
+
+
+
+</head>
+<body>
+  <div id="main-wrapper">
+    <div class="navbar navbar-inverse" role="navigation">
+      <div class="navbar-header">
+        <div class="logo"><h1>仪表盘-管理员模板</h1></div>
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="sr-only">切换导航</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button> 
+      </div>   
+    </div>
+    <div class="template-page-wrapper">
+      <div class="navbar-collapse collapse templatemo-sidebar">
+        <ul class="templatemo-sidebar-menu">
+          <li>
+            <form class="navbar-form">
+              <input type="text" class="form-control" id="templatemo_search_box" placeholder="Search...">
+              <span class="btn btn-default">走</span>
+            </form>
+          </li>
+          <li><a href="index.html"><i class="fa fa-home"></i>仪表盘</a></li>
+          <li class="sub">
+            <a href="javascript:;">
+              <i class="fa fa-database"></i> 嵌套菜单<div class="pull-right"><span class="caret"></span></div>
+            </a>
+            <ul class="templatemo-submenu">
+              <li><a href="#">张三</a></li>
+              <li><a href="#">李四</a></li>
+              <li><a href="#">王五</a></li>
+              <li><a href="#">赵六</a></li>
+              <li><a href="#">田七</a></li>
+            </ul>
+          </li>
+          <li><a href="data-visualization.html"><i class="fa fa-cubes"></i><span class="badge pull-right">9</span>数据可视化</a></li>
+          <li><a href="maps.html"><i class="fa fa-map-marker"></i><span class="badge pull-right">42</span>地图</a></li>
+          <li class="active"><a href="#"><i class="fa fa-users"></i><span class="badge pull-right">新</span>管理员们</a></li>
+          <li><a href="preferences.html"><i class="fa fa-cog"></i>首选项</a></li>
+          <li><a href="javascript:;" data-toggle="modal" data-target="#confirmModal"><i class="fa fa-sign-out"></i>离开</a></li>
+        </ul>
+      </div><!--/.navbar-collapse -->
+
+      <div class="templatemo-content-wrapper">
+        <div class="templatemo-content">
+          <ol class="breadcrumb">
+            <li><a href="index.html">管理面板</a></li>
+            <li><a href="#">管理员</a></li>
+            <li class="active">表</li>
+          </ol>
+          <h1>管理员们</h1>
+          <p>这里是表格和用户</p>
+
+          <div class="row margin-bottom-30">
+            <div class="col-md-12">
+              <ul class="nav nav-pills">
+                <li class="active"><a href="#">新用户<span class="badge">42</span></a></li>
+                <li><a href="#">活跃用户<span class="badge">107</span></a></li>
+                <li><a href="#">过期用户<span class="badge">3</span></a></li>
+              </ul>          
+            </div>
+          </div> 
+          <div class="row">
+            <div class="col-md-12">
+              <div class="btn-group pull-right" id="templatemo_sort_btn">
+                <button type="button" class="btn btn-default">排序</button>
+                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                  <span class="caret"></span>
+                  <span class="sr-only">切换下拉</span>
+                </button>
+                <ul class="dropdown-menu" role="menu">
+                  <li><a href="#">名字</a></li>
+                  <li><a href="#">姓氏</a></li>
+                  <li><a href="#">用户名</a></li>
+                </ul>
+              </div>
+              <div class="table-responsive">
+                <h4 class="margin-bottom-15">管理员表</h4>
+                <table class="table table-striped table-hover table-bordered">
+                  <thead>
+                    <tr>
+                      <th>#</th>
+                      <th>账号</th>
+                      <th>姓名</th>
+                      <th>手机号码</th>
+                      <th>qq</th>
+                      <th>编辑</th>
+         <!--             <th>行动</th>-->
+                      <th>删除</th>
+                    </tr>
+                  </thead>
+                  <tbody class="guanli">
+                    <tr>
+     <!--                 <td>1</td>
+                      <td>John</td>
+                      <td>Smith</td>
+                      <td>@js</td>
+                      <td>a@company.com</td>
+                      <td><a href="#" class="btn btn-default">编辑</a></td>-->
+<!--                      <td>
+                        &lt;!&ndash; Split button &ndash;&gt;
+                        <div class="btn-group">
+                          <button type="button" class="btn btn-info">行动</button>
+                          <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown">
+                            <span class="caret"></span>
+                            <span class="sr-only">切换下拉</span>
+                          </button>
+                          <ul class="dropdown-menu" role="menu">
+                            <li><a href="#">引导</a></li>
+                            <li><a href="#">字体太棒了！</a></li>
+                            <li><a href="#">jQuery</a></li>
+                          </ul>
+                        </div>
+                      </td>-->
+             <!--         <td><a href="#" class="btn btn-link">删除</a></td>-->
+                    </tr>
+                    <tr class="success">
+<!--                      <td>2</td>
+                      <td>Bill</td>
+                      <td>Digital</td>
+                      <td>@bd</td>
+                      <td>bd@company.com</td>
+                      <td><a href="#" class="btn btn-default">编辑</a></td>
+                      <td>
+                        &lt;!&ndash; Split button &ndash;&gt;
+                        <div class="btn-group">
+                          <button type="button" class="btn btn-info">行动</button>
+                          <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown">
+                            <span class="caret"></span>
+                            <span class="sr-only">切换下拉</span>
+                          </button>
+                          <ul class="dropdown-menu" role="menu">
+                            <li><a href="#">引导程序</a></li>
+                            <li><a href="#">字体太棒了！</a></li>
+                            <li><a href="#">jQuery</a></li>
+                          </ul>
+                        </div>
+                      </td>
+                      <td><a href="#" class="btn btn-link">删除</a></td>-->
+                    </tr>
+                  <!--  <tr>
+                      <td>3</td>
+                      <td>Marry</td>
+                      <td>James</td>
+                      <td>@mj</td>
+                      <td>mj@company.com</td>
+                      <td><a href="#" class="btn btn-default">编辑</a></td>
+                      <td>
+                        &lt;!&ndash; Split button &ndash;&gt;
+                        <div class="btn-group">
+                          <button type="button" class="btn btn-info">行动</button>
+                          <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown">
+                            <span class="caret"></span>
+                            <span class="sr-only">切换下拉</span>
+                          </button>
+                          <ul class="dropdown-menu" role="menu">
+                            <li><a href="#">引导程序</a></li>
+                            <li><a href="#">字体太棒了！</a></li>
+                            <li><a href="#">jQuery</a></li>
+                          </ul>
+                        </div>
+                      </td>
+                      <td><a href="#" class="btn btn-link">删除</a></td>
+                    </tr>
+                    <tr>
+                      <td>4</td>
+                      <td>Carry</td>
+                      <td>Land</td>
+                      <td>@cl</td>
+                      <td>cl@company.com</td>
+                      <td><a href="#" class="btn btn-default">编辑</a></td>
+                      <td>
+                        &lt;!&ndash; Split button &ndash;&gt;
+                        <div class="btn-group">
+                          <button type="button" class="btn btn-info">行动</button>
+                          <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown">
+                            <span class="caret"></span>
+                            <span class="sr-only">下拉切换</span>
+                          </button>
+                          <ul class="dropdown-menu" role="menu">
+                            <li><a href="#">引导程序</a></li>
+                            <li><a href="#">字体太棒了！</a></li>
+                            <li><a href="#">jQuery</a></li>
+                          </ul>
+                        </div>
+                      </td>
+                      <td><a href="#" class="btn btn-link">删除</a></td>
+                    </tr>-->
+           <!--         <tr class="success">
+                      <td>5</td>
+                      <td>New</td>
+                      <td>Caroline</td>
+                      <td>@nc</td>
+                      <td>nc@company.com</td>
+                      <td><a href="#" class="btn btn-default">Edit</a></td>
+                      <td>
+                        &lt;!&ndash; Split button &ndash;&gt;
+                        <div class="btn-group">
+                          <button type="button" class="btn btn-info">行动</button>
+                          <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown">
+                            <span class="caret"></span>
+                            <span class="sr-only">切换下拉</span>
+                          </button>
+                          <ul class="dropdown-menu" role="menu">
+                            <li><a href="#">引导程序</a></li>
+                            <li><a href="#">字体太棒了</a></li>
+                            <li><a href="#">jQuery</a></li>
+                          </ul>
+                        </div>
+                      </td>
+                      <td><a href="#" class="btn btn-link">删除</a></td>
+                    </tr>
+                    <tr class="danger">
+                      <td>6</td>
+                      <td>Martin</td>
+                      <td>East</td>
+                      <td>@me</td>
+                      <td>me@company.com</td>
+                      <td><a href="#" class="btn btn-default">编辑</a></td>
+                      <td>
+                        &lt;!&ndash; Split button &ndash;&gt;
+                        <div class="btn-group">
+                          <button type="button" class="btn btn-info">行动</button>
+                          <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown">
+                            <span class="caret"></span>
+                            <span class="sr-only">切换下拉</span>
+                          </button>
+                          <ul class="dropdown-menu" role="menu">
+                            <li><a href="#">引导程序</a></li>
+                            <li><a href="#">字体太棒了</a></li>
+                            <li><a href="#">jQuery</a></li>
+                          </ul>
+                        </div>
+                      </td>
+                      <td><a href="#" class="btn btn-link">删除</a></td>
+                    </tr> -->
+                  </tbody>
+                </table>
+              </div>
+              <div class="table-responsive">
+                <h4 class="margin-bottom-15">用户表：</h4>
+                <table class="table table-striped table-hover table-bordered">
+                  <thead>
+                    <tr>
+                      <th>#</th>
+                      <th>账号</th>
+                      <th>姓名</th>
+                      <th>手机号码</th>
+                      <th>qq</th>
+                      <th>编辑</th>
+                      <!--             <th>行动</th>-->
+                      <th>删除</th>
+                    </tr>
+                  </thead>
+                  <tbody class="yonghu">
+
+                  </tbody>
+                </table>
+              </div>
+              <ul class="pagination pull-right">
+                <li class="disabled"><a href="#">&laquo;</a></li>
+                <li class="active"><a href="#">1 <span class="sr-only">(当前的)</span></a></li>
+                <li><a href="#">2 <span class="sr-only">(当前的)</span></a></li>
+                <li><a href="#">3 <span class="sr-only">(当前的)</span></a></li>
+                <li><a href="#">4 <span class="sr-only">(当前的)</span></a></li>
+                <li><a href="#">5 <span class="sr-only">(当前的)</span></a></li>
+                <li><a href="#">&raquo;</a></li>
+              </ul>  
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal -->
+      <div class="modal fade" id="confirmModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+              <h4 class="modal-title" id="myModalLabel">你确定要离开吗？</h4>
+            </div>
+            <div class="modal-footer">
+              <a href="sign-in.html" class="btn btn-primary">是</a>
+              <button type="button" class="btn btn-default" data-dismiss="modal">不，我再想想</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer class="templatemo-footer">
+        <div class="templatemo-copyright">
+          <p>Copyright &copy; 2084 Your Company Name Collect from <a href="http://www.17sucai.com/" title="网页模板" target="_blank">网页模板</a></p>
+        </div>
+      </footer>
+    </div>
+</div>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/templatemo_script.js"></script>
+  </body>
+</html>

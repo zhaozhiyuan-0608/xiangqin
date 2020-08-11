@@ -1,0 +1,23 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="xiangqin06-admin-recerse:war exploded">
+    <output-path>$PROJECT_DIR$/xiangqin06-admin-recerse/target/xiangqin06-admin-recerse</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <exploded>true</exploded>
+        <module>xiangqin06-admin-recerse</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="xiangqin06-admin-recerse" />
+        </element>
+      </element>
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/xiangqin06-admin-recerse/target/xiangqin06-admin-recerse/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="javaee-facet-resources" facet="xiangqin06-admin-recerse/web/Web" />
+    </root>
+  </artifact>
+</component>

@@ -1,0 +1,26 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="xiangqin05-admin-util:war exploded">
+    <output-path>$PROJECT_DIR$/xiangqin05-admin-util/target/xiangqin05-admin-util</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <exploded>true</exploded>
+        <module>xiangqin05-admin-util</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="xiangqin05-admin-util" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Maven: javax.servlet:javax.servlet-api:4.0.1" />
+        </element>
+      </element>
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/xiangqin05-admin-util/target/xiangqin05-admin-util/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="javaee-facet-resources" facet="xiangqin05-admin-util/web/Web" />
+    </root>
+  </artifact>
+</component>

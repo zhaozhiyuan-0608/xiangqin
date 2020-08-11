@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="xiangqin02-admin-webui:war">
+    <output-path>$PROJECT_DIR$/xiangqin02-admin-webui/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>xiangqin02-admin-webui</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="xiangqin02-admin-webui.war">
+      <element id="artifact" artifact-name="xiangqin02-admin-webui:war exploded" />
+    </root>
+  </artifact>
+</component>

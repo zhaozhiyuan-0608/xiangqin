@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="xiangqin01-admin-parent:war">
+    <output-path>$PROJECT_DIR$/xiangqin01-admin-parent/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>xiangqin01-admin-parent</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="xiangqin01-admin-parent.war">
+      <element id="artifact" artifact-name="xiangqin01-admin-parent:war exploded" />
+    </root>
+  </artifact>
+</component>

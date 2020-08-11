@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="xiangqin06-admin-reverse:war">
+    <output-path>$PROJECT_DIR$/xiangqin06-admin-reverse/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>xiangqin06-admin-reverse</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="xiangqin06-admin-reverse.war">
+      <element id="artifact" artifact-name="xiangqin06-admin-reverse:war exploded" />
+    </root>
+  </artifact>
+</component>

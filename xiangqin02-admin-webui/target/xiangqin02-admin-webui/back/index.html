@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><![endif]-->
+  <title>Dashboard, Free HTML5 Admin Template</title>
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="viewport" content="width=device-width">        
+  <link rel="stylesheet" href="css/templatemo_main.css">
+</head>
+<body>
+  <div class="navbar navbar-inverse" role="navigation">
+      <div class="navbar-header">
+        <div class="logo"><h1>后台管理</h1></div>
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="sr-only">跳转导航</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button> 
+      </div>   
+    </div>
+    <div class="template-page-wrapper">
+      <div class="navbar-collapse collapse templatemo-sidebar">
+        <ul class="templatemo-sidebar-menu">
+          <li>
+            <form class="navbar-form">
+              <input type="text" class="form-control" id="templatemo_search_box" placeholder="Search...">
+              <span class="btn btn-default">Go</span>
+            </form>
+          </li>
+          <li class="active"><a href="#"><i class="fa fa-home"></i>仪表板</a></li>
+          <li class="sub open">
+            <a href="javascript:;">
+              <i class="fa fa-database"></i> 嵌套菜单 <div class="pull-right"><span class="caret"></span></div>
+            </a>
+            <ul class="templatemo-submenu">
+              <li><a href="#">张三</a></li>
+              <li><a href="#">李四</a></li>
+              <li><a href="#">王五</a></li>
+              <li><a href="#">赵六</a></li>
+              <li><a href="#">田七</a></li>
+            </ul>
+          </li>
+          <li><a href="data-visualization.html"><i class="fa fa-cubes"></i><span class="badge pull-right">9</span>数据可视化</a></li>
+          <li><a href="maps.html"><i class="fa fa-map-marker"></i><span class="badge pull-right">42</span>地图</a></li>
+          <li><a href="tables.html"><i class="fa fa-users"></i><span class="badge pull-right">新</span>管理员</a></li>
+          <li><a href="preferences.html"><i class="fa fa-cog"></i>首选项</a></li>
+          <li><a href="javascript:;" data-toggle="modal" data-target="#confirmModal"><i class="fa fa-sign-out"></i>返回登录</a></li>
+        </ul>
+      </div><!--/.navbar-collapse -->
+
+      <div class="templatemo-content-wrapper">
+        <div class="templatemo-content">
+          <ol class="breadcrumb">
+            <li><a href="index.html">管理面板</a></li>
+            <li><a href="#">仪表盘</a></li>
+            <li class="active">概述</li>
+            <li><a href="sign-in.html">登录的表单</a></li>
+          </ol>
+          <h1>仪表盘</h1>
+          <p>仪表盘 是 <a rel="nofollow" href="index.html">管理</a>适合所有人去学<a href="http://chartjs.org">沙尔特剑圣</a>, <a href="http://getbootstrap.com">引导</a>, 和 <a href="http://jqvmap.com">JQVMap</a>. templatemo 提供 <a href="#">free website templates</a> that can be used for any purpose. Morbi id nisi enim. Ut congue interdum pharetra facilisi. Aenean consectetur pellentesque mauris nec ornare. Nam tortor just, condimentum.</p>
+
+          <div class="margin-bottom-30">
+            <div class="row">
+              <div class="col-md-12">
+                <ul class="nav nav-pills">
+                  <li class="active"><a href="#">家 <span class="badge">42</span></a></li>
+                  <li class="active"><a href="#">概要文件 <span class="badge">126</span></a></li>
+                  <li class="active"><a href="#">信息 <span class="badge">14</span></a></li>
+                </ul>          
+              </div>
+            </div>
+          </div>         
+
+          <div class="row">
+            <div class="col-md-6">
+              <div class="templatemo-alerts">
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="alert alert-success alert-dismissible" role="alert">
+                      <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                      <strong>成功</strong> 但他们不允许骚扰
+                    </div>
+                    <div class="alert alert-info alert-dismissible" role="alert">
+                      <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                      路易斯失去了力量，你能保证他不想找你谈谈吗?
+                    </div>
+                    <div class="alert alert-warning alert-dismissible" role="alert">
+                      <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                      前厅有免费的骨灰盒
+                    </div>
+                    <div class="alert alert-danger alert-dismissible" role="alert">
+                      <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                      高贵的客人和欧盟的会员们在一起
+                    </div>            
+                  </div>  
+                </div>            
+              </div>              
+            </div>
+            <div class="col-md-6">
+              <div class="templatemo-progress">
+                <div class="list-group">
+                  <a href="#" class="list-group-item active">
+                    <h4 class="list-group-item-heading">最新数据</h4>
+                    <p class="list-group-item-text">我愿意放弃一切</p>
+                  </a>
+                  <a href="#" class="list-group-item">
+                    <h4 class="list-group-item-heading">旧数据</h4>
+                    <p class="list-group-item-text">在前厅怀孕</p>
+                  </a>
+                </div>
+                <div class="progress">
+                  <div class="progress-bar progress-bar-success" style="width: 35%">
+                    <span class="sr-only">35% Complete (success)</span>
+                  </div>
+                  <div class="progress-bar progress-bar-warning progress-bar-striped" style="width: 20%">
+                    <span class="sr-only">20% Complete (warning)</span>
+                  </div>
+                  <div class="progress-bar progress-bar-danger" style="width: 10%">
+                    <span class="sr-only">10% Complete (danger)</span>
+                  </div>
+                </div>
+                <div class="progress">
+                  <div class="progress-bar progress-bar-striped active"  role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 45%">
+                    <span class="sr-only">45% Complete</span>
+                  </div>
+                </div>
+              </div> 
+            </div>
+          </div>
+          <div class="templatemo-panels">
+            <div class="row">
+              <div class="col-md-6 col-sm-6 margin-bottom-30">
+                <div class="panel panel-success">
+                  <div class="panel-heading">数据 Visualization</div>
+                  <canvas id="templatemo-line-chart" height="120" width="500"></canvas>
+                </div> 
+                <span class="btn btn-success"><a href="data-visualization.html">更多图表</a></span>
+              </div>   
+              <div class="col-md-6 col-sm-6 margin-bottom-30">
+                <div class="panel panel-primary">
+                  <div class="panel-heading">用户图表</div>
+                  <div class="panel-body">
+                    <table class="table table-striped">
+                      <thead>
+                        <tr>
+                          <th>#</th>
+                          <th>名字</th>
+                          <th>姓</th>
+                          <th>用户名字</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>1</td>
+                          <td>John</td>
+                          <td>Smith</td>
+                          <td>@js</td>
+                        </tr>
+                        <tr>
+                          <td>2</td>
+                          <td>Bill</td>
+                          <td>Jones</td>
+                          <td>@bj</td>
+                        </tr>
+                        <tr>
+                          <td>3</td>
+                          <td>Marry</td>
+                          <td>James</td>
+                          <td>@mj</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                <span class="btn btn-primary"><a href="tables.html">看到表</a></span>
+              </div>       
+            </div>
+            <div class="row">
+              <div class="col-md-6 col-sm-6">
+                <!-- Nav tabs -->
+                <ul class="nav nav-tabs" role="tablist" id="templatemo-tabs">
+                  <li class="active"><a href="#home" role="tab" data-toggle="tab">家</a></li>
+                  <li><a href="#profile" role="tab" data-toggle="tab">配置文件</a></li>
+                  <li><a href="#messages" role="tab" data-toggle="tab">信息</a></li>
+                  <li><a href="#settings" role="tab" data-toggle="tab">设置</a></li>
+                </ul>
+
+                <!-- Tab panes -->
+                <div class="tab-content">
+                  <div class="tab-pane fade in active" id="home">
+                    <ul class="list-group">
+                      <li class="list-group-item"><input type="checkbox" name="" value=""> 暂停了苏打水</li>
+                      <li class="list-group-item"><input type="checkbox" name="" value=""> mattis 不喝酒</li>
+                      <li class="list-group-item"><input type="checkbox" name="" value=""> Aenean 有脂肪</li>
+                      <li class="list-group-item"><input type="checkbox" name="" value=""> 我恨你</li>
+                      <li class="list-group-item"><input type="checkbox" name="" value=""> 因特爱吃西瓜皮</li>
+                    </ul>
+                  </div>
+                  <div class="tab-pane fade" id="profile">
+                    <ul class="list-group">
+                      <li class="list-group-item">
+                        <span class="badge">33</span>
+                        充满仇恨的话语
+                      </li>
+                      <li class="list-group-item">
+                        <span class="badge">9</span>
+                        Dapibus ac 接口
+                      </li>
+                      <li class="list-group-item">
+                        <span class="badge">0</span>
+                        苏特也爱吃西瓜皮
+                      </li>
+                      <li class="list-group-item">
+                        <span class="badge">14</span>
+                        该死的仇恨
+                      </li>
+                      <li class="list-group-item">
+                        <span class="badge">2</span>
+                        厄斐琉斯的菊花
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="tab-pane fade" id="messages">
+                    <div class="list-group">
+                      <a href="#" class="list-group-item active">
+                        莫比爱吃西瓜皮
+                      </a>
+                      <a href="#" class="list-group-item">Dapibus ac 接口</a>
+                      <a href="#" class="list-group-item">莫比、里奥、苏果皮</a>
+                      <a href="#" class="list-group-item">把consectetur ac带来</a>
+                      <a href="#" class="list-group-item">上皮和新盖</a>
+                    </div>
+                  </div>
+                  <div class="tab-pane fade" id="settings">
+                    <div class="list-group">
+                      <a href="#" class="list-group-item disabled">
+                        Vivamus 我恨你
+                      </a>
+                      <a href="#" class="list-group-item">戴上你的 ac consectetur ac</a>
+                      <a href="#" class="list-group-item">上皮和新盖</a>
+                      <a href="#" class="list-group-item">这里有公共设施</a>
+                      <a href="#" class="list-group-item">莫比寮鼠标</a>
+                    </div>
+                  </div>
+                </div> <!-- tab-content --> 
+              </div> 
+              <div class="col-md-6 col-sm-6">
+                <div class="panel-group" id="accordion">
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+                         手风琴1
+                        </a>
+                      </h4>
+                    </div>
+                    <div id="collapseOne" class="panel-collapse collapse in">
+                      <div class="panel-body">
+                        广告陈词滥调
+                      </div>
+                    </div>
+                  </div>
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+                          手风琴2
+                        </a>
+                      </h4>
+                    </div>
+                    <div id="collapseTwo" class="panel-collapse collapse">
+                      <div class="panel-body">
+                       我还没听说过他们控告他们的人
+                      </div>
+                    </div>
+                  </div>
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+                          手风气3
+                        </a>
+                      </h4>
+                    </div>
+                    <div id="collapseThree" class="panel-collapse collapse">
+                      <div class="panel-body">
+                        <button type="button" id="loading-example-btn" data-loading-text="Loading..." class="btn btn-primary">
+                          点击这里
+                        </button> 加载
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>          
+            </div> 
+          </div>    
+        </div>
+      </div>
+      <!-- Modal -->
+      <div class="modal fade" id="confirmModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">关闭</span></button>
+              <h4 class="modal-title" id="myModalLabel">你确定要注销吗？</h4>
+            </div>
+            <div class="modal-footer">
+              <a href="sign-in.html" class="btn btn-primary">是的</a>
+              <button type="button" class="btn btn-default" data-dismiss="modal">不，我不确定</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer class="templatemo-footer">
+        <div class="templatemo-copyright">
+          <p>复制在您的项目名<a href="http://www.17sucai.com/" title="网页模板" target="_blank">网页模板</a></p>
+        </div>
+      </footer>
+    </div>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/Chart.min.js"></script>
+    <script src="js/templatemo_script.js"></script>
+    <script type="text/javascript">
+    // Line chart
+    var randomScalingFactor = function(){ return Math.round(Math.random()*100)};
+    var lineChartData = {
+      labels : ["January","February","March","April","May","June","July"],
+      datasets : [
+      {
+        label: "My First dataset",
+        fillColor : "rgba(220,220,220,0.2)",
+        strokeColor : "rgba(220,220,220,1)",
+        pointColor : "rgba(220,220,220,1)",
+        pointStrokeColor : "#fff",
+        pointHighlightFill : "#fff",
+        pointHighlightStroke : "rgba(220,220,220,1)",
+        data : [randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor()]
+      },
+      {
+        label: "My Second dataset",
+        fillColor : "rgba(151,187,205,0.2)",
+        strokeColor : "rgba(151,187,205,1)",
+        pointColor : "rgba(151,187,205,1)",
+        pointStrokeColor : "#fff",
+        pointHighlightFill : "#fff",
+        pointHighlightStroke : "rgba(151,187,205,1)",
+        data : [randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor()]
+      }
+      ]
+
+    }
+
+    window.onload = function(){
+      var ctx_line = document.getElementById("templatemo-line-chart").getContext("2d");
+      window.myLine = new Chart(ctx_line).Line(lineChartData, {
+        responsive: true
+      });
+    };
+
+    $('#myTab a').click(function (e) {
+      e.preventDefault();
+      $(this).tab('show');
+    });
+
+    $('#loading-example-btn').click(function () {
+      var btn = $(this);
+      btn.button('loading');
+      // $.ajax(...).always(function () {
+      //   btn.button('reset');
+      // });
+  });
+  </script>
+</body>
+</html>
