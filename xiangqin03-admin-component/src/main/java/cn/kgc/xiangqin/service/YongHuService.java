@@ -2,6 +2,7 @@ package cn.kgc.xiangqin.service;
 
 import cn.kgc.xiangqin.entity.YongHu;
 
+import java.awt.print.Book;
 import java.util.List;
 
 /**
@@ -11,4 +12,8 @@ import java.util.List;
 
 public interface YongHuService {
     List<YongHu> queryAll(int id);
+
+
+    /*查询所有*/
+    List<YongHu> getAll();
 }

@@ -754,4 +754,8 @@ public class YongHu {
     public void setJieshao(String jieshao) {
         this.jieshao = jieshao == null ? null : jieshao.trim();
     }
+
+
+
+
 }

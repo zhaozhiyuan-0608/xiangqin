@@ -22,4 +22,13 @@ public class YongHuServiceImpl implements YongHuService {
     public List<YongHu> queryAll(int id) {
         return yongHuMapper.queryAll(id);
     }
+
+
+
+
+
+    @Override
+    public List<YongHu> getAll() {
+        return yongHuMapper.getAll();
+    }
 }

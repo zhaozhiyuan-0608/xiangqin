@@ -596,4 +596,13 @@
     order by id  desc
 
   </select>
+
+  <!--查询所有-->
+  <select id="getAll" resultType="YongHu">
+        SELECT * from yonghu
+    </select>
+
+
+
+
 </mapper>

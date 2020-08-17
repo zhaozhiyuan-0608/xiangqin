@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.awt.print.Book;
 import java.util.List;
 
 /**
@@ -24,5 +25,15 @@ public class BackYongHuController {
 
     return  yongHuService.queryAll(id);
 }
+
+
+    /*查询所有*/
+    @RequestMapping("/List")
+    public List<YongHu> queryAll(){
+        return yongHuService.getAll();
+    }
+
+
+
 
 }

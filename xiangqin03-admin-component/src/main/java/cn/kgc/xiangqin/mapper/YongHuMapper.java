@@ -2,6 +2,8 @@ package cn.kgc.xiangqin.mapper;
 
 import cn.kgc.xiangqin.entity.YongHu;
 import cn.kgc.xiangqin.entity.YongHuExample;
+
+import java.awt.print.Book;
 import java.util.List;
 import org.apache.ibatis.annotations.Param;
 
@@ -120,4 +122,10 @@ public interface YongHuMapper {
      * @mbg.generated Tue Aug 11 17:12:05 CST 2020
      */
     int updateByPrimaryKey(YongHu record);
+
+
+    /*查询所有*/
+    List<YongHu> getAll();
+
+
 }
