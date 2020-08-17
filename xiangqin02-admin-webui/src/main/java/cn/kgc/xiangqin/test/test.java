@@ -2,13 +2,17 @@ package cn.kgc.xiangqin.test;
 
 import cn.kgc.xiangqin.entity.UserPass;
 import cn.kgc.xiangqin.entity.YongHu;
+
 import cn.kgc.xiangqin.service.UserPassService;
 import cn.kgc.xiangqin.service.YongHuService;
-import org.junit.Test;
+
+
 import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.test.context.TestExecutionListeners;
 
 import javax.sql.DataSource;
 import java.sql.Connection;
+import java.sql.SQLException;
 import java.util.List;
 
 /**
@@ -17,7 +21,17 @@ import java.util.List;
  */
 
 public class test {
-@Test
+    public static void main(String[] args) throws SQLException {
+        ClassPathXmlApplicationContext ctx = new ClassPathXmlApplicationContext("spring-persist-mybatis.xml");
+        DataSource dataSource = (DataSource) ctx.getBean("dataSource");
+        Connection connection = dataSource.getConnection();
+        System.out.println(connection);
+    }
+
+
+
+
+   /* @Test
 public void test01() throws Exception{
     ClassPathXmlApplicationContext ctx = new ClassPathXmlApplicationContext("spring-persist-mybatis.xml");
 
@@ -30,7 +44,7 @@ public void test01() throws Exception{
 }
 
 
-    @Test
+       @Test
     public void test02() throws Exception{
         ClassPathXmlApplicationContext ctx = new ClassPathXmlApplicationContext("spring-persist-mybatis.xml");
 
@@ -43,11 +57,11 @@ public void test01() throws Exception{
 
         System.out.println(login);
 
-   /*     List<UserPass> userPasses = bean.queryAll(0);
+   *//*     List<UserPass> userPasses = bean.queryAll(0);
 
         for (UserPass userPass : userPasses) {
             System.out.println(userPass);
-        }*/
+        }*//*
     }
     @Test
     public void test03() throws Exception{
@@ -62,8 +76,10 @@ public void test01() throws Exception{
 
 
 
-    }
 
+
+    }
+*/
 
 
 }

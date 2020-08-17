@@ -314,4 +314,28 @@ select u.*,y.* from user_pass u,yonghu y
       admin = #{admin,jdbcType=INTEGER}
     where uName = #{uname,jdbcType=VARCHAR}
   </update>
+
+
+  <!--登录-->
+  <select id="getNameAndPassword" parameterType="String" resultType="UserPass">
+        SELECT * from user_pass where uname=#{uname} and upassword=#{upassword}
+    </select>
+
+  <!--注册-->
+  <insert id="register" parameterType="UserPass">
+
+  insert into user_pass(uname,upassword)
+        values(#{uname},#{upassword})
+
+</insert>
+  <!--验证用户是否存在-->
+  <select id="findUserByLgName" resultType="int">
+
+    select count(*) from user_pass where uname like #{uname}
+
+</select>
+
+
+
+
 </mapper>

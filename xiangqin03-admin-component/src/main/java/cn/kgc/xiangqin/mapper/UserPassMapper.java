@@ -4,6 +4,7 @@ import cn.kgc.xiangqin.entity.UserPass;
 import cn.kgc.xiangqin.entity.UserPassExample;
 import java.util.List;
 import org.apache.ibatis.annotations.Param;
+import org.springframework.security.core.userdetails.User;
 import org.springframework.stereotype.Repository;
 
 @Repository
@@ -105,4 +106,12 @@ public interface UserPassMapper {
      * @mbg.generated Sat Aug 08 15:49:35 CST 2020
      */
     int updateByPrimaryKey(UserPass record);
+    //登录
+    public UserPass getNameAndPassword(@Param("uname")String uname, @Param("upassword") String upassword);
+
+    /*注册*/
+    boolean register(@Param("uname") String uname, @Param("upassword") String upassword);
+
+    int findUserByLgName( String uname);
+
 }

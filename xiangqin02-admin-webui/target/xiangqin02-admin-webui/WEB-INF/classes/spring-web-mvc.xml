@@ -19,4 +19,8 @@
     <mvc:default-servlet-handler/>
     <mvc:annotation-driven/>
 
+
+    <mvc:view-controller path="/success" view-name="index"/>
+
+
 </beans>

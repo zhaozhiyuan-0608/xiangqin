@@ -3,6 +3,7 @@ package cn.kgc.xiangqin.service;
 import cn.kgc.xiangqin.entity.UserPass;
 import cn.kgc.xiangqin.entity.UserPassExample;
 import org.apache.ibatis.annotations.Param;
+import org.springframework.security.core.userdetails.User;
 
 import java.util.List;
 
@@ -106,4 +107,15 @@ public interface UserPassService {
      * @mbg.generated Sat Aug 08 15:49:35 CST 2020
      */
     int updateByPrimaryKey(UserPass record);
+
+    /*登录*/
+    public UserPass getNameAndPassword(String uname, String upassword);
+
+    /*注册*/
+    boolean register(String uname, String upassword);
+
+    int findUserByLgName(String uname);
+
+
+
 }
